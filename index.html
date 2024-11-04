@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" class="company-logo">
+                <img src="News-publisher-logo.png" alt="company logo">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="Home" onclick="reload()">Home</li>
+                    <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+                    <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                    <li class="hover-link nav-item" id="technology" onclick="onNavItemClick('technology')">Technology
+                    </li>
+                    <button id="mode">dark/light</button>
+                    
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="search here">
+                <button id="search-button" class="search-button">Search</button>
+
+            </div>
+            
+        </div>
+    </nav>
+
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                    saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+            </div>
+        </div>
+    </template>
+     <!-- Footer Section -->
+     <footer>
+        <div class="footer-container">
+            <div class="footer-section about" >
+                <h2>About Us</h2>
+                <p>We are committed to delivering the latest news and stories from around the world. Stay informed with us.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">World</a></li>
+                    <li><a href="#">Politics</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li ><a href="#">Sports</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <ul>
+                    <li>Email: contact@newswebsite.com</li>
+                    <li>Phone: +123 456 7890</li>
+                    <li>Address: 123 News Street, City, Country</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 NewsWebsite | Designed by Me</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
